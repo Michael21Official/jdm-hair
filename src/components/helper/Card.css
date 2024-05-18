@@ -1,0 +1,80 @@
+@import url('../../style/colors.css');
+
+.card {
+  width: 33%;
+  height: fit-content;
+  border: 1px solid var(--gold-color);;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: inline-block;
+  position: relative; /* Dodajemy pozycję względną dla kontenera karty */
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.card-content {
+  position: absolute; /* Ustawiamy pozycję absolutną dla treści karty */
+  bottom: 0; /* Ustawiamy treść na dole karty */
+  width: 100%; /* Szerokość treści jest równa szerokości karty */
+  background: rgba(0, 0, 0, 0.7); /* Dodajemy tło z przezroczystością */
+  color: var(--gold-color); /* Ustawiamy kolor tekstu na biały */
+  padding: 20px;
+  box-sizing: border-box; /* Włączamy model pudełkowy */
+  transition: max-height 0.3s ease-in-out;
+}
+
+.card-header {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: var(--gold-color); /* Ustawiamy kolor tekstu na biały */
+}
+
+/* Media Queries dla tabletów */
+@media (max-width: 1024px) {
+  .card {
+    width: 50%; /* Szerokość karty na tabletach */
+    margin-bottom: 15px;
+  }
+
+  .card-content {
+    padding: 15px; /* Zmniejszamy padding */
+  }
+
+  .card-header {
+    font-size: 1.2rem;
+  }
+
+  .card-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Media Queries dla telefonów */
+@media (max-width: 768px) {
+  .card {
+    width: 100%; /* Szerokość karty na telefonach */
+    margin-bottom: 10px;
+  }
+
+  .card-content {
+    padding: 10px; /* Zmniejszamy padding */
+  }
+
+  .card-header {
+    font-size: 1rem;
+  }
+
+  .card-description {
+    font-size: 0.8rem;
+  }
+}

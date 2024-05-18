@@ -1,0 +1,90 @@
+@import url('../../style/colors.css');
+
+.gallery-section {
+    margin-top: 20px;
+    padding: 20px;
+    color: var(--gold-color);
+    border: 2px solid var(--gold-color);
+    border-radius: 20px;
+    background-color: var(--black-color);
+}
+
+.gallery-section h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.slick-slider {
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.gallery-slide {
+    position: relative;
+    padding: 10px; /* Dodaje odstęp wewnętrzny do każdego slajdu */
+    margin: 0 10px; /* Dodaje odstęp między slajdami */
+    box-sizing: border-box; /* Uwzględnia padding i margines w szerokości i wysokości elementu */
+}
+
+.gallery-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--gold-color); /* Dodaje obramowanie */
+}
+
+.photo-details {
+    background-color: rgba(0, 0, 0, 0.7); /* Tło dla szczegółów zdjęcia */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slick-dots li button:before {
+    color: var(--gold-color);
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: var(--gold-color);
+}
+
+@media (max-width: 768px) {
+    .gallery-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .slick-slider {
+        max-width: 100%;
+    }
+
+    .gallery-slide {
+        padding: 5px; /* Adjust spacing for smaller screens */
+        margin: 0 5px; /* Adjust margin for smaller screens */
+    }
+
+    .photo-details {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}

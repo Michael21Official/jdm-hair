@@ -1,0 +1,146 @@
+/* Header.css */
+@import url('../../style/colors.css');
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--black-color);
+  color: var(--gold-color);
+  flex-wrap: wrap;
+  border: 2px solid var(--gold-color);
+  border-radius: 20px;
+}
+
+.ring {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ring i {
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--gold-color);
+  transition: 0.5s;
+}
+
+.ring i:nth-child(1) {
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  animation: animate 6s linear infinite;
+}
+
+.ring i:nth-child(2) {
+  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  animation: animate 4s linear infinite;
+}
+
+.ring i:nth-child(3) {
+  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  animation: animate2 10s linear infinite;
+}
+
+.ring:hover i {
+  border: 6px solid var(--clr);
+  filter: drop-shadow(0 0 20px var(--clr));
+}
+
+.logo_text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.nav ul li {
+  margin-right: 20px;
+}
+
+.nav ul li button {
+  background: none;
+  border: 2px solid var(--gold-color);
+  color: var(--gold-color);
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 10px; /* Zaokrąglenie przycisków */
+}
+
+.nav ul li button:hover {
+  background: var(--gold-color);
+  color: var(--black-color);
+}
+
+.contact_info {
+  font-style: italic;
+  margin: 10px 0;
+}
+
+.img_logo {
+  width: 80px;  /* Adjust the width to fit within the ring */
+  height: 80px;  /* Adjust the height to fit within the ring */
+  background-image: url('/public/image/skrot.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Dodaj obramowanie dla td */
+td {
+  border: 2px solid var(--gold-color);
+  padding: 10px;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav ul {
+    flex-direction: column;
+  }
+
+  .nav ul li {
+    margin: 10px 0;
+  }
+
+  .logo_text {
+    font-size: 1.2rem;
+  }
+
+  .nav ul li button {
+    font-size: 1.2rem;
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
