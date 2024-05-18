@@ -6,7 +6,7 @@ import './AboutUs.css';
 const AboutUs: React.FC = () => {
   return (
     <section className="about-us" id='about'>
-      {/* <h2>O nas</h2>
+      <h2>O nas</h2>
       <div className='opis'>
         <p>1. Uczciwość i partnerskie relacje z Klientami</p>
         <p>2. Zrozumienie wobec problemu utraty włosów wynikające z osobistych doświadczeń</p>
@@ -14,7 +14,7 @@ const AboutUs: React.FC = () => {
         <p>4. Najwyższa jakość oferowanych produktów i usług</p>
         <p>5. Siedziba zapewniająca intymność i poczucie bezpieczeństwa</p>
         <p>6. Konkurencyjne ceny i rabaty</p>
-      </div> */}
+      </div>
       <div className="services">
         <Card
           image='image/image-hair/strzyzenie.jpg' // Ścieżka do obrazu dla strzyżenia
