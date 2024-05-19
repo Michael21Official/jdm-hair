@@ -51,9 +51,9 @@
         height: 60px;
     }
 
-    .testimonial-text {
-        font-size: 0.9rem;
-    }
+.star {
+    margin-right: 2px;
+}
 
     .testimonial-name {
         font-size: 0.8rem;
