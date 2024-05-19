@@ -27,9 +27,7 @@ const Header: React.FC = () => {
           <li><button onClick={() => document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' })}>Opinie</button></li>
           <li><button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>Kontakt</button></li>
         </ul>
-      </nav>
-      <div className='logo_text'>JDM HAIR - Justyna Dziedzic-Murzydło</div>
-      <div className='contact_info'>
+        <div className='contact_info'>
         <div className='contact_item'>
           <i className="fas fa-phone-alt"></i>
           <span>+48 123 456 789</span>
@@ -43,6 +41,8 @@ const Header: React.FC = () => {
           <span>Ul. Przykładowa 1, Warszawa</span>
         </div>
       </div>
+      </nav>
+      <div className='logo_text'>JDM HAIR - Justyna Dziedzic-Murzydło</div>
     </header>
   );
 };

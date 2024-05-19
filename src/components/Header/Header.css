@@ -95,7 +95,7 @@
 
 .contact_info {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   font-style: italic;
   margin: 10px 0;
